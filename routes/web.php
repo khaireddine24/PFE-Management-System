@@ -76,6 +76,7 @@ Route::prefix('teacher')->group(function () {
 });
 Route::controller(FicheController::class)->group(function() {
     Route::get('/fiche','fiche')->name('fiche');
+    Route::get('/fiche/pdf/{id}', [FicheController::class, 'generatePDF'])->name('fiche.pdf');
     Route::post('/FicheStore',  'Fichestore')->name('fiche.store');
     
     

@@ -23,6 +23,8 @@
                     <p class="card-text text-xl">Langue: {{ $fiche->langue }}</p>
                 </div>
             </div>
+            <br>
+            <a href="{{ route('fiche.pdf', $fiche->id) }}" class="btn btn-primary ml-40">Télécharger en PDF</a>
         @elseif ($fiche->Remarque == 'en attente')
             <div class="alert alert-warning" role="alert">
                 Votre fiche n'est pas encore validée.

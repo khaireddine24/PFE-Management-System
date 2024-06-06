@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Enseignant;
 use App\Models\Fiche;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class FicheController extends Controller
 {
@@ -49,6 +50,13 @@ class FicheController extends Controller
             // Redirect back with error message
             return redirect()->back()->with('error', 'Erreur lors de la création de la fiche.');
         }
+    }
+
+    public function generatePDF($id)
+    {
+        $fiche = Fiche::find($id);
+        $pdf = PDF::loadView('layouts.fiche-pdf', compact('fiche'));
+        return $pdf->download('fiche.pdf');
     }
     
 }

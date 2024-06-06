@@ -28,13 +28,14 @@ class AdminController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if (Auth::guard('admin')->attempt($credentials) ) {
             return redirect()->route('admin.dashboard');
         }
 
         return redirect()->back()->withInput($request->only('email'))->withErrors([
             'email' => 'Email ou mot de passe incorrect.',
         ]);
+        
     }
 
     public function logout(Request $request)

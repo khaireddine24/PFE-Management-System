@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Login</title>
+    <link rel="icon" href="../images/Teacher.png"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -106,14 +106,12 @@
         <div class="col-lg-4 mb-3">
             <!-- Log in Error Messages -->
             
-            
-
             <!-- Log in form -->
             <h2 class="h2 d-lg-none">Login to Start Buying your</h2>
             <h2 class="h2 d-lg-none">Dream Home</h2>
             <h4 class="h2 text-center d-none d-lg-block">Log In</h4>
             <form method="post" action="{{ route('teacher.login') }}">
- @csrf
+                @csrf
                 <div class="mb-4 form-group">
                     <label for="email" class="form-label lsp weig1 mt-5">{{ __('E-Mail Address') }}</label>
                     <input id="email" type="email" class="mt-2 pd py-4 lsp weig2 border-0 brad form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -141,10 +139,10 @@
                     {{ __('Login') }}
                 </button>
                 @if (Route::has('teacher.password.request'))
-                                        <a class="btn btn-link" href="{{ route('teacher.password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif
+                    <a class="btn btn-link" href="{{ route('teacher.password.request') }}">
+                          {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
             </form>
 
         </div>

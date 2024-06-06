@@ -58,10 +58,6 @@ public function mafiche()
 }
 
 
-
-
-
-
     /**
      * Destroy an authenticated session.
      */

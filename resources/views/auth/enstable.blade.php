@@ -32,9 +32,10 @@
     <table class="table mt-5">
         <thead>
             <tr >
-                <th style="width: 50%">Name</th>
-                <th style="width: 50%">Email</th>
-                <th style="width: 25%">Actions</th>
+                <th style="width: 30%">Name</th>
+                <th style="width: 30%">Email</th>
+                <th style="width: 20%">Action to edit</th>
+                <th style="width: 20%">Action to delete</th>
             </tr>
         </thead>
         <tbody>
@@ -43,10 +44,12 @@
                     <tr>
                         <td>{{ $info->name }}</td>
                         <td>{{ $info->email }}</td>
-                        <td class="text-end">
+                        <td class="text-start">
                             <a href="{{ route('updateform',$info->id) }}" class="btn btn-info btn-sm">
                                 Update
-                            </a><br>
+                            </a>
+                        </td>
+                        <td class="text-start">
                             <a href="{{ route('deleteens',$info->id) }}" class="btn btn-danger btn-sm">
                                 Delete
                             </a>

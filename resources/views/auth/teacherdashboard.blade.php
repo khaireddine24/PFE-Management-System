@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>teacher</title>
+  <link rel="icon" href="../images/Teacher.png"/>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,14 +62,10 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-2 ">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
-      <img src="{{ asset('images_profil/iset.jpg') }}"
-           alt="AdminLTE Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Teacher</span>
+      <span class="brand-text font-weight-light ml-2">Teacher</span>
     </a>
 
     <!-- Sidebar -->
@@ -113,13 +110,13 @@
 
               <li class="nav-item">
                 <a href="{{  route('teacher.studenttable') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
                   <p>Students</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('teacher.soutenance') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-chalkboard nav-icon"></i>
                   <p>Soutenances</p>
                 </a>
               </li>
@@ -134,7 +131,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <div class="content">
+    <div class="content" style="margin-top: 9px">
         <div class="container-fluid">
           @yield('content')
           
@@ -145,11 +142,10 @@
   </div>
 
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <center>
+    <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/khaireddine-ihrissane-687898236/">Khaireddine Ihrissane</a>.</strong> All rights
     reserved.
+    </center>
   </footer>
 
   <!-- Control Sidebar -->

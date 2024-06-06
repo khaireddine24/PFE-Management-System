@@ -15,19 +15,20 @@
       </div>
     </div>
   </section>
-<br><br><a href="{{ route('addjury') }}" class="btn btn-success float-end">Add Jury</a><br><br><br>
+<br><a href="{{ route('addjury') }}" class="btn btn-success float-end" >Add Jury</a><br>
+<hr/><br>
 <div class="row">
     @foreach ($data as $jury)
     <div class="col-lg-3 col-8">
-        <div class="small-box d-flex flex-column justify-content-between" style="width: 15rem; height: 190px;">
-            <div class="inner ">
-                <h2 class="border p-2">{{ $jury->name }}</h2> 
-            </div>
-            <div class="footer mt-auto">
-                <a href="{{ route('deletejury',$jury->id) }}" class="btn btn-danger btn-sm">Delete</a>
-            </div>
-        </div>
-    </div>
+      <div class="small-box d-flex flex-column justify-content-between align-items-center" style="width: 15rem; height: 190px;">
+          <div class="inner">
+              <h2 class="border p-2">{{ $jury->name }}</h2> 
+          </div>
+          <div class="footer mt-auto mb-5">
+              <a href="{{ route('deletejury', $jury->id) }}" class="btn btn-danger btn-sm">Delete</a>
+          </div>
+      </div>
+  </div>
     
     @endforeach
 </div>

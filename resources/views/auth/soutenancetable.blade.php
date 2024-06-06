@@ -38,22 +38,28 @@
 <table class="table table-striped projects">
     <thead>
         <tr>
-            <th style="width: 20%">
+            <th style="width: 10%">
                 date
            </th>
-            <th style="width: 20%">
+            <th style="width: 10%">
                  Etudiant
             </th>
            
-            <th style="width: 20%">
+            <th style="width: 10%">
                 Encadrent
             </th>
-            <th style="width: 20%">
+            <th style="width: 10%">
               Jury
           </th>
             <th style="width: 10%">
               Salle
-          </th>
+            </th>
+            <th style="width: 10%">
+              Action to edit
+            </th>
+            <th style="width: 10%">
+              Action to delete
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -65,19 +71,22 @@
             <td>{{ $soutenance->enseignant->name }}</td>
             <td>{{ $soutenance->jury->name }}</td>
             <td>{{ $soutenance->sale->numero }}</td>
-            <td class="project-actions text-right">
+            <td class="project-actions text-left">
                           
               <a class="btn btn-info btn-sm" href="{{ route('editsoutenance',$soutenance->id)}}">
                   <i class="fas fa-pencil-alt">
                   </i>
                   Update
               </a>
+            </td>
+            <td class="project-actions text-left">
               <a class="btn btn-danger btn-sm" href="{{ route('deletesoutenance',$soutenance->id)}}">
                   <i class="fas fa-trash">
                   </i>
                   Delete
               </a>
-          </td>
+            </td>
+          
         </tr>
         @endforeach
         @endif

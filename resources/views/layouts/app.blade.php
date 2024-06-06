@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="{{ asset('css/Fiche_PFE.css') }}"/>
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel="icon" href="images/Student.png"/>
+        <title>Student</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

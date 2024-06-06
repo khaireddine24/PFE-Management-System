@@ -6,6 +6,7 @@
   <title>Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../images/AdminRo.png"/>
  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -44,14 +45,11 @@
       </div>
     </li>
     </ul>
-
     <!-- SEARCH FORM -->
     
-
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
 
-      
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
@@ -59,14 +57,11 @@
       </li>
     </ul>
   </nav>
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-2 ">
     <!-- Brand Logo -->
-    <a href="{{ route('admin.dashboard') }}" class="brand-link">
-      <img src="{{ asset('images_profil/iset.jpg') }}"
-           alt="AdminLTE Logo"
-           class="brand-image  elevation-3"
-           style="opacity: .9; width:45px;height:60px;">
-<span class="brand-text font-weight-light">{{ env('APP_NAME') }}</span>
+    <a href="{{ route('admin.dashboard') }}" class="brand-link ml-2">
+      
+      <span class="brand-text font-weight-light">Dashboard</span>
     </a>
 
     <!-- Sidebar -->
@@ -87,7 +82,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{  route('admin.dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -96,8 +91,6 @@
             </a>
             
           </li>
-          
-          
           
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -110,19 +103,19 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{  route('admin.ens') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-users nav-icon"></i>
                   <p>Encadrents</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('jury') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-users nav-icon"></i>
                   <p>Juries</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('showsoutenance') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-chalkboard nav-icon"></i>
                   <p>Soutenances</p>
                 </a>
               </li>
@@ -138,22 +131,21 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     
-    <div class="content">
+    <div class="content" style="margin-top: 9px">
         <div class="container-fluid">
           @yield('content')
           
           
         </div><!-- /.container-fluid -->
-      </div>
+      </div><br><br>
     
   </div>
 
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <center>
+    <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/khaireddine-ihrissane-687898236/">Khaireddine Ihrissane</a>.</strong> All rights
     reserved.
+    </center>
   </footer>
 
   <!-- Control Sidebar -->
