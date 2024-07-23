@@ -107,19 +107,45 @@
                             <span class="link-text">Dashboard</span>
                         </a>
                     @else
-                        <a href="{{ route('login') }}" class="link-card">
-                            <img src="images/user.png" alt="Log in" class="link-img">
-                            <span class="link-text">Login Student</span>
-                        </a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="link-card">
-                                <img src="images/Register.png" alt="Register" class="link-img">
-                                <span class="link-text">Register Student</span>
-                            </a>
-                        @endif
+                        <div class="flex flex-wrap justify-center">
+                            <!-- Student -->
+                            <div class="m-2">
+                                <a href="{{ route('login') }}" class="link-card">
+                                    <img src="images/user.png" alt="Log in" class="link-img">
+                                    <span class="link-text">Login Student</span>
+                                </a>
+                            </div>
+    
+                            <!-- Teacher -->
+                            <div class="m-2">
+                                <a href="{{ route('teacher.login') }}" class="link-card">
+                                    <img src="images/teacher.png" alt="Log in Teacher" class="link-img">
+                                    <span class="link-text">Login Teacher</span>
+                                </a>
+                                @if (Route::has('teacher.register'))
+                                    <a href="{{ route('teacher.register') }}" class="link-card mt-2">
+                                        <img src="images/teacher-register.png" alt="Register Teacher" class="link-img">
+                                        <span class="link-text">Register Teacher</span>
+                                    </a>
+                                @endif
+                            </div>
+    
+                            <!-- Admin -->
+                            <div class="m-2">
+                                <a href="{{ route('admin.login') }}" class="link-card">
+                                    <img src="images/AdminRo.png" alt="Log in Admin" class="link-img">
+                                    <span class="link-text">Login Admin</span>
+                                </a>
+                                @if (Route::has('admin.register'))
+                                    <a href="{{ route('admin.register') }}" class="link-card mt-2">
+                                        <img src="images/admin-register.png" alt="Register Admin" class="link-img">
+                                        <span class="link-text">Register Admin</span>
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
                     @endauth
                 @endif
-
             </div>
         </div>
     </body>

@@ -51,7 +51,7 @@ class FicheController extends Controller
             return redirect()->back()->with('error', 'Erreur lors de la création de la fiche.');
         }
     }
-
+    //generate PDF part
     public function generatePDF($id)
     {
         $fiche = Fiche::find($id);

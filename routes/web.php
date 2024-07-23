@@ -40,17 +40,20 @@ Route::prefix('admin')->group(function () {
         Route::get('dashboard', [AdminController::class, 'cards'])->name('admin.dashboard');
         Route::get('/enseignant', [AdminController::class,'indexens'])->name('admin.ens');
         Route::get('addenseignant', [AdminController::class, 'formaddenseignant'])->name('admin.formaddenseignant');
+        
         Route::post('/teacheradded',[AdminController::class, 'create_enseignant'])->name('admin.createens');
         Route::get('/deleteenseignant/{id}',[AdminController::class, 'delete'])->name('deleteens');
         Route::get('/editens/{id}', [AdminController::class,'edit'])->name('updateform');
         Route::post('/ensupdated/{id}',[AdminController::class, 'update'])->name('updateens');
         Route::post('select-student', [AdminController::class, 'selectStudent'])->name('soutenance.selectStudent');
+
         Route::get('/soutenance', [AdminController::class,'addsoutenance'])->name('addsoutenance');
         Route::post('/createsoutenance', [AdminController::class,'create_soutenance'])->name('create_soutenance');
         Route::get('/soutenancedata', [AdminController::class,'showsoutenance'])->name('showsoutenance');
         Route::get('/deletesoutenance/{id}',[AdminController::class, 'deletesoutenance'])->name('deletesoutenance');
         Route::get('/editsoutenance/{id}', [AdminController::class,'editsoutenance'])->name('editsoutenance');
         Route::post('/updatesoutenance/{id}',[AdminController::class, 'updatesoutenance'])->name('updatesoutenance');
+
         Route::get('/jury', [AdminController::class,'jury'])->name('jury');
         Route::get('/addjury', [AdminController::class,'addjury'])->name('addjury');
         Route::get('/deletejury/{id}',[AdminController::class, 'deletejury'])->name('deletejury');
@@ -60,6 +63,8 @@ Route::prefix('admin')->group(function () {
         Route::post('/storesalle', [AdminController::class,'storesalle'])->name('storesalle');
     });
 });
+
+
 Route::prefix('teacher')->group(function () {
     // Routes pour l'authentification de l'enseignant
     Route::get('login', [TeacherController::class, 'showLoginForm'])->name('teacher.login');
