@@ -79,6 +79,8 @@ Route::prefix('teacher')->group(function () {
         Route::post('/ficheupdated/{id}', [TeacherController::class, 'updateFiche'])->name("updatefiche");
     });
 });
+
+
 Route::controller(FicheController::class)->group(function() {
     Route::get('/fiche','fiche')->name('fiche');
     Route::get('/fiche/pdf/{id}', [FicheController::class, 'generatePDF'])->name('fiche.pdf');

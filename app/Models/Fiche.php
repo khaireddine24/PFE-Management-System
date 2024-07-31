@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Enseignant;
+
 class Fiche extends Model
 {
     use HasFactory;
@@ -23,10 +24,12 @@ class Fiche extends Model
         'technologies_utilisees',
         'langue',
     ];
+
     public function enseignant()
     {
         return $this->belongsTo(Enseignant::class, 'enseignant_id');
     }
+    
     public function user()
     {
         return $this->belongsTo(User::class, 'etudiant_id');
