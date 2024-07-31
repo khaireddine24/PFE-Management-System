@@ -119,7 +119,7 @@
                             <!-- Teacher -->
                             <div class="m-2">
                                 <a href="{{ route('teacher.login') }}" class="link-card">
-                                    <img src="images/teacher.png" alt="Log in Teacher" class="link-img">
+                                    <img src="images/Teacher.png" alt="Log in Teacher" class="link-img">
                                     <span class="link-text">Login Teacher</span>
                                 </a>
                                 @if (Route::has('teacher.register'))
